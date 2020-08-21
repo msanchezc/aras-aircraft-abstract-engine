@@ -5,9 +5,6 @@
 import pytest
 
 
-from aras_aircraft_abstract_engine import aras_aircraft_abstract_engine
-
-
 @pytest.fixture
 def response():
     """Sample pytest fixture.

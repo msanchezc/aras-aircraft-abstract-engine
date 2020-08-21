@@ -12,7 +12,7 @@ class ArasAircraftAbstractEngine(protocol_pb2_grpc.ControlServiceActions):
     def _generic_error(method_name):
         def f(useless):
             raise Exception(
-                "ArasAircraftAbstractEngine: No definition found to start_takeoff")
+                "No definition found to %s" % method_name)
         return f
 
     def __init__(self):
