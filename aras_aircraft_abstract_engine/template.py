@@ -45,7 +45,7 @@ class ArasAircraftAbstractEngine(protocol_pb2_grpc.ControlServiceActions):
         server = aio.server()
         server.add_insecure_port("[::]:%s" % port)
         protocol_pb2_grpc.add_ControlServiceActionsServicer_to_server(
-            ArasAircraftAbstractEngine(), server
+            self, server
         )
         await server.start()
         await server.wait_for_termination()
