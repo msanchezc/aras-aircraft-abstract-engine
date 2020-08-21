@@ -3,8 +3,8 @@ aras-aircraft-abstract-engine
 =============================
 
 
-.. image:: https://img.shields.io/pypi/v/aras_aircraft_abstract_engine.svg
-        :target: https://pypi.python.org/pypi/aras_aircraft_abstract_engine
+.. image:: https://img.shields.io/pypi/v/aras-aircraft-abstract-engine.svg
+        :target: https://pypi.python.org/pypi/aras-aircraft-abstract-engine
 
 .. image:: https://img.shields.io/travis/PSBPOSAS/aras-aircraft-abstract-engine.svg
         :target: https://travis-ci.org/PSBPOSAS/aras-aircraft-abstract-engine
