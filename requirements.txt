@@ -1,1 +1,1 @@
-aras-control-service-protocol==0.1.5
+git+https://github.com/PSBPOSAS/aras-control-service-protocol.git@develop

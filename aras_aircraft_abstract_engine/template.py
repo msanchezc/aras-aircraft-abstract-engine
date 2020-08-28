@@ -20,6 +20,8 @@ class ArasAircraftAbstractEngine(protocol_pb2_grpc.ControlServiceActions):
             "start_takeoff")
         self.start_go_up = ArasAircraftAbstractEngine._generic_error(
             "start_go_up")
+        self.start_mission = ArasAircraftAbstractEngine._generic_error(
+            "start_mission")
 
     # ------------------ Start take off actions --------------------------
 
@@ -40,6 +42,16 @@ class ArasAircraftAbstractEngine(protocol_pb2_grpc.ControlServiceActions):
         return protocol_pb2.ACK()
 
     # ------------------ End go up actions ------------------------------
+
+    # ------------------ Start missions actions -------------------------
+
+    async def StartMission(self, request, context):
+        mission_data = request
+        t = threading.Thread(target=self.start_mission, args=[mission_data])
+        t.start()
+        return protocol_pb2.ACK()
+
+    # ------------------ End missions actions ---------------------------
 
     async def _start_async_server(self, port):
         server = aio.server()
